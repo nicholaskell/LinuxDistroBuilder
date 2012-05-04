@@ -34,7 +34,7 @@ cp ../$UNCOMPRESSED_DIR/isolinux.cfg .
 cp ../$UNCOMPRESSED_DIR/logo.16 .
 cp ../$UNCOMPRESSED_DIR/$SFS .
 cp ../$UNCOMPRESSED_DIR/vmlinuz .
-#cp ../lupusave-fresh.3fs .
+cp ../lupusave-fresh.3fs .
 
 
 

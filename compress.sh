@@ -10,6 +10,9 @@ INIT_TREE=initrd-tree
 SFS_DIR=squashfs-root
 SFS=lupu_528.sfs
 
+rm -rf $STAGING_DIR
+mkdir $STAGING_DIR
+
 cd $UNCOMPRESSED_DIR
 rm $SFS
 mksquashfs $SFS_DIR $SFS
@@ -31,6 +34,7 @@ cp ../$UNCOMPRESSED_DIR/isolinux.cfg .
 cp ../$UNCOMPRESSED_DIR/logo.16 .
 cp ../$UNCOMPRESSED_DIR/$SFS .
 cp ../$UNCOMPRESSED_DIR/vmlinuz .
+#cp ../lupusave-fresh.3fs .
 
 
 

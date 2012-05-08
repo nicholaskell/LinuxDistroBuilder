@@ -1,9 +1,17 @@
-NEW_ISO=$PWD/new_pup.iso
+CURRENT_VERSION_ISO=bt_528_102.iso
+
+NEW_ISO=$PWD/$CURRENT_VERSION_ISO
 USB_MOUNT=usb_mount
 
-USB_DEV=/dev/sdc
-USB_MS_DEV=/dev/sdc1
-USB_EX_DEV=/dev/sdc2
+
+if [ ! "$1" ];then
+	echo "Must say what to format!"
+	exit
+fi
+
+USB_DEV=$1
+USB_MS_DEV=$USB_DEV'1'
+USB_EX_DEV=$USB_DEV'2'
 
 #eject $USB_DEV
 #mkdir $USB_MOUNT

@@ -1,4 +1,10 @@
-#!/bin/sh
+#!/bin/bash
+
+if [ ! "$1" ];then
+	echo "Must say what to format!"
+	exit
+fi
+
 
 USB_DEV=$1
 USB_MS_DEV=$USB_DEV'1'
@@ -34,4 +40,3 @@ sudo tune2fs -c 180 $USB_EX_DEV
 sudo parted $USB_DEV --script print
 
 exit
-

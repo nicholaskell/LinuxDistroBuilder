@@ -1,4 +1,4 @@
 NEW_ISO=new_pup.iso
-STAGING_DIR=staging
+STAGING_DIR=new_iso_stage
 
-sudo mkisofs -o $NEW_ISO $STAGING_DIR/
+mkisofs -o $NEW_ISO $STAGING_DIR/
